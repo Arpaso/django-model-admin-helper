@@ -17,7 +17,7 @@ Usage
     from admin_helpers import ButtonableModelAdmin, AdminURLMixin, ModelAdminWithForeignKeyLinksMetaclass
 
     class MyModelAdmin(AdminURLMixin, admin.ModelAdmin):
-        /__metaclass__ = ModelAdminWithForeignKeyLinksMetaclass
+        __metaclass__ = ModelAdminWithForeignKeyLinksMetaclass
 
         def get_urls(self):
             urls = super(MyModelAdmin, self).get_urls()
