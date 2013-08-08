@@ -11,6 +11,7 @@ local_settings.py
 .project
 .pydevproject
 .pydevproject.bak
+.idea/
 
 #buildout's specific
 .installed.cfg
@@ -36,4 +37,11 @@ db
 #media
 /media
 /var
+
+#virtualenv
+/dist
+/include
+/local
+/lib
+/build
 
