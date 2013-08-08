@@ -1,11 +1,15 @@
 Django Model Admin Helpers
 ==========================
 
+Link to repository: https://github.com/Arpaso/django-model-admin-helper
+
 Provides classes to extend default django admin functionality:
 
 * **ButtonableModelAdmin**
 * **ModelAdminWithForeignKeyLinksMetaclass** - adds clickable foreign key      links at admin interface in list view; Uses **list_display** fields to try adding link to the field in list item.  
 * **AdminURLMixin** - provides ability to extend /admin/ urls and make views to urls like: /admin/myurl.
+
+
 
 Usage
 =====
