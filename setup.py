@@ -30,6 +30,7 @@ setup(name="django-model-admin-helper",
     url='http://github.com/Arpaso/django-model-admin-helper',
     download_url='http://github.com/Arpaso/django-model-admin-helper/tarball/0.1',
     classifiers=(
+        "Development Status :: 4 - Beta",
         "Framework :: Django",
         "Intended Audience :: Developers",
         "Intended Audience :: System Administrators",
