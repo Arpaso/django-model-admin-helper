@@ -17,7 +17,7 @@ install_requires = [
 
 #Execute function to handle setuptools functionality
 setup(name="django-model-admin-helper",
-    version="0.1",
+    version="0.2",
     description="Admin helpers",
     long_description=read('README.rst'),
     package_dir={'': 'src'},
@@ -38,4 +38,3 @@ setup(name="django-model-admin-helper",
         "Topic :: Software Development",
     ),
 )
-
