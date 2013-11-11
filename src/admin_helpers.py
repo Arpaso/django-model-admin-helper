@@ -4,7 +4,11 @@ from django.contrib import admin
 from django.utils.datastructures import SortedDict
 from django.http import HttpResponseRedirect
 from django.forms import MediaDefiningClass
-from django.utils.functional import update_wrapper
+
+try:
+    from functools import update_wrapper
+except ImportError:
+    from django.utils.functional import update_wrapper
 
 
 class ButtonableModelAdmin(admin.ModelAdmin):
