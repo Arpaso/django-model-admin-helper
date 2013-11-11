@@ -3,7 +3,7 @@ from functools import partial
 from django.contrib import admin
 from django.utils.datastructures import SortedDict
 from django.http import HttpResponseRedirect
-from django.forms import MediaDefiningClass
+from django.contrib.admin.options import RenameBaseModelAdminMethods
 
 try:
     from functools import update_wrapper
@@ -46,7 +46,7 @@ class ButtonableModelAdmin(admin.ModelAdmin):
 
     def get_urls(self):
 
-        from django.conf.urls.defaults import patterns, url
+        from django.conf.urls import patterns, url
 
         def wrap(view):
             def wrapper(*args, **kwargs):
@@ -58,7 +58,7 @@ class ButtonableModelAdmin(admin.ModelAdmin):
         ) + super(ButtonableModelAdmin, self).get_urls()
     
 
-class ModelAdminWithForeignKeyLinksMetaclass(type):
+class ModelAdminWithForeignKeyLinksMetaclass(RenameBaseModelAdminMethods):
 
     def __new__(cls, name, bases, attrs):
         new_class = super(ModelAdminWithForeignKeyLinksMetaclass, cls).__new__(cls, name, bases, attrs)
